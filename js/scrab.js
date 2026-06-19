@@ -91,8 +91,8 @@ function draw7 (hand_index) {
         putBack(this);
         draw1(this);
     });
+    boardstate.hand = $(`#hand-${hand_index}`).html();
 }
-// END MAIN
 
 // Draw back up to 7 tiles
 function drawUp(hand_index) {
