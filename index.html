@@ -1,0 +1,61 @@
+<!--
+File: index.html
+GUI Assignment: Scrabble -- Single line version
+James Bord, UMass Lowell Computer Science, james_bord@student.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on June 16, 2026
+-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Template head -->
+    <title>Scrabbe, a one line version of Scrabble</title>
+    <meta charset="utf-8">
+    <link href="css/scrab.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loads of the Jquery library files -->
+    <script src="js/jquery-4.0.0.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <!-- load of the page's javascript -->
+    <script src="js/scrab.js" defer></script>
+</head>
+<body>
+
+    <div id="top-container">
+        <button id="reset-game">Reset Game</button>
+        <div id="score-container">0</div>
+        <div id="spacer"></div>
+    </div>
+    <div id="board-container">
+        <table id="board"></table>
+    </div>
+    
+    <div id="bottom-section">
+        <div id="hand-container">
+            <table id="hand-0" class="hand">
+                <tr>
+                    <td id="hand-tile-0" class="hand-none"></td>
+                    <td id="hand-tile-1" class="hand-none"></td>
+                    <td id="hand-tile-2" class="hand-none"></td>
+                    <td id="hand-tile-3" class="hand-none"></td>
+                    <td id="hand-tile-4" class="hand-none"></td>
+                    <td id="hand-tile-5" class="hand-none"></td>
+                    <td id="hand-tile-6" class="hand-none"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="buttons">
+            <button id="submit">Submit Word</button>
+            <button id="reset">Reset</button>
+            <button id="redeal">Redeal hand</button>
+        </div>
+    </div>
+
+</body>
+</html>

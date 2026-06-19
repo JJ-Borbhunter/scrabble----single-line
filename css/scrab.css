@@ -1,0 +1,218 @@
+
+body {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    flex-direction: column;
+    min-height: 100vh;       /* full screen height */
+    width: fit-content;
+    margin: auto;
+
+    background-image: url(../img/wood.png);
+    background-repeat: repeat;
+}
+
+#hand-container {
+    background-image: url("../img/scrabble-tile-holder-406774_640.png");
+    background-repeat: space;
+    background-size: 100% 100%; /* or cover */
+    width: 400px;
+    height: 100px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.hand {
+    width: fit-content;
+    height: fit-content;
+    border-spacing: 5px 0;
+    margin: auto;
+}
+
+.hand tr td {
+    width: 32px;
+    height: 32px;
+    background-size: 100% 100%;
+    margin: 0 10px;
+}
+
+.hand-none {
+    display: none;
+}
+
+#board {
+    border-collapse: collapse;
+    width: fit-content;
+    height: fit-content;
+    box-shadow:
+    2px 2px 4px #7a5a38,
+    -1px -1px 4px #a67c52;
+}
+
+#board tr {
+    display: none;
+}
+#board-row-7 {
+    display: block !important;
+}
+
+#board td {
+    box-shadow:
+    2px 2px 4px #7a5a38,
+    -1px -1px 4px #a67c52;
+    /* width: 32px;
+    height: 32px; */
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.board-square {
+    background-image: url("../img/TDTile-Black-64x64.png");
+    /* background-size: 192px 32px; */
+    background-size: 288px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.board-dls {
+    /* background-position: -32px 0; */
+    background-position: -48px 0;
+}
+
+.board-dws {
+    /* background-position: -64px 0; */
+    background-position: -96px 0;
+}
+
+.board-tls {
+    /* background-position: -96px 0; */
+    background-position: -144px 0;
+}
+
+.board-tws {
+    /* background-position: -128px 0; */
+    background-position: -192px 0;
+}
+
+.board-star {
+    /* background-position: -160px 0; */
+    background-position: -240px 0;
+}
+
+.board-letter {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.letter-A { background-image: url("../img/Scrabble_Tile_A.jpg"); }
+.letter-B { background-image: url("../img/Scrabble_Tile_B.jpg"); }
+.letter-C { background-image: url("../img/Scrabble_Tile_C.jpg"); }
+.letter-D { background-image: url("../img/Scrabble_Tile_D.jpg"); }
+.letter-E { background-image: url("../img/Scrabble_Tile_E.jpg"); }
+.letter-F { background-image: url("../img/Scrabble_Tile_F.jpg"); }
+.letter-G { background-image: url("../img/Scrabble_Tile_G.jpg"); }
+.letter-H { background-image: url("../img/Scrabble_Tile_H.jpg"); }
+.letter-I { background-image: url("../img/Scrabble_Tile_I.jpg"); }
+.letter-J { background-image: url("../img/Scrabble_Tile_J.jpg"); }
+.letter-K { background-image: url("../img/Scrabble_Tile_K.jpg"); }
+.letter-L { background-image: url("../img/Scrabble_Tile_L.jpg"); }
+.letter-M { background-image: url("../img/Scrabble_Tile_M.jpg"); }
+.letter-N { background-image: url("../img/Scrabble_Tile_N.jpg"); }
+.letter-O { background-image: url("../img/Scrabble_Tile_O.jpg"); }
+.letter-P { background-image: url("../img/Scrabble_Tile_P.jpg"); }
+.letter-Q { background-image: url("../img/Scrabble_Tile_Q.jpg"); }
+.letter-R { background-image: url("../img/Scrabble_Tile_R.jpg"); }
+.letter-S { background-image: url("../img/Scrabble_Tile_S.jpg"); }
+.letter-T { background-image: url("../img/Scrabble_Tile_T.jpg"); }
+.letter-U { background-image: url("../img/Scrabble_Tile_U.jpg"); }
+.letter-V { background-image: url("../img/Scrabble_Tile_V.jpg"); }
+.letter-W { background-image: url("../img/Scrabble_Tile_W.jpg"); }
+.letter-X { background-image: url("../img/Scrabble_Tile_X.jpg"); }
+.letter-Y { background-image: url("../img/Scrabble_Tile_Y.jpg"); }
+.letter-Z { background-image: url("../img/Scrabble_Tile_Z.jpg"); }
+
+.letter-_ {
+    background-image: url("../img/Scrabble_Tile_Blank.jpg");
+}
+
+.mousebound {
+    position: absolute;
+}
+
+#bottom-section {
+    display: flex;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: auto;
+
+    background: linear-gradient(to bottom, #c19a6b, #a67c52);
+
+    border-top: 3px solid #d8b58a;
+    border-left: 3px solid #d8b58a;
+    border-right: 3px solid #7a5a38;
+    border-bottom: 3px solid #7a5a38;
+
+    padding: 4px 12px;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+
+    text-shadow:
+        0 1px 0 #e0c6a3;
+
+    color: #2f1b0c;
+}
+
+#top-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+#score-container {
+    margin: 30px auto;
+    padding: 0px;
+    width: 100px;
+    height: fit-content;
+    font-size: 1.5em;
+    text-align: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, #a67c52, #c19a6b);
+
+    border-top: 3px solid #7a5a38;
+    border-left: 3px solid #7a5a38;
+    border-right: 3px solid #d8b58a;
+    border-bottom: 3px solid #d8b58a;
+
+    padding: 4px 12px;
+
+    font-family: Tahoma, sans-serif;
+    grid-column: 2;
+}
+
+#reset-game {
+    grid-column: 1;
+    margin: auto;
+}
+
+
+button:active {
+    background: linear-gradient(to bottom, #a67c52, #c19a6b);
+
+    border-top: 3px solid #7a5a38;
+    border-left: 3px solid #7a5a38;
+    border-right: 3px solid #d8b58a;
+    border-bottom: 3px solid #d8b58a;
+}
