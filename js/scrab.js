@@ -1,7 +1,13 @@
 
 var letterTable;
 var dragged = null;
-var boardstate;
+var boardstate   = {
+    board: null,
+    hand: null,
+    mult: 1,
+    add: 0,
+    lastX: null
+};
 var scores = [0, 0, 0, 0];
 var current_player = 0;
 var rowHTML;
