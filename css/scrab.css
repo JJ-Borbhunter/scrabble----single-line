@@ -1,4 +1,5 @@
 
+/* Body section centers content and has a free wood texture as its backdrop */
 body {
     display: flex;
     justify-content: center; /* horizontal */
@@ -12,6 +13,7 @@ body {
     background-repeat: repeat;
 }
 
+/* hand container is a div containing the background for the scrabble rack */
 #hand-container {
     background-image: url("../img/scrabble-tile-holder-406774_640.png");
     background-repeat: space;
@@ -23,6 +25,7 @@ body {
     align-items: center;
 }
 
+/* the table inside the rack, holding 7 tile td's */
 .hand {
     width: fit-content;
     height: fit-content;
@@ -30,6 +33,7 @@ body {
     margin: auto;
 }
 
+/* all td's in the hand structure need a fized size and to display their whole background */
 .hand tr td {
     width: 32px;
     height: 32px;
@@ -37,10 +41,12 @@ body {
     margin: 0 10px;
 }
 
+/* when a tile has been played it's cell isn't deleted just hidden */
 .hand-none {
     display: none;
 }
 
+/* board has no gap between squares, and a little 3d effect box shadow */
 #board {
     border-collapse: collapse;
     width: fit-content;
@@ -50,13 +56,17 @@ body {
     -1px -1px 4px #a67c52;
 }
 
+/* hide all rows, since this assignment only needed one */
 #board tr {
     display: none;
 }
+
+/* show one row for the assignment */
 #board-row-7 {
     display: block !important;
 }
 
+/* each square of the board has a 3d box shadow in a light wood color */
 #board td {
     box-shadow:
     2px 2px 4px #7a5a38,
@@ -70,44 +80,62 @@ body {
     box-sizing: border-box;
 }
 
+/* 
+all board squares share a textuer file. 
+This file is 1x6 so the texture size is 1x a cell's width by
+6x a cell's height. Background position of the blank square is at 0,0
+*/
 .board-square {
     background-image: url("../img/TDTile-Black-64x64.png");
     /* background-size: 192px 32px; */
-    background-size: 288px;
+    background-size: 288px 48px;
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
+/* double letter score at +48 to the right so move 48 to the left */
 .board-dls {
     /* background-position: -32px 0; */
     background-position: -48px 0;
 }
 
+/* double word score at +96 to the right so move 96 to the left */
 .board-dws {
     /* background-position: -64px 0; */
     background-position: -96px 0;
 }
 
+/* tripple letter score at +144 to the right so move 144 to the left */
 .board-tls {
     /* background-position: -96px 0; */
     background-position: -144px 0;
 }
 
+/* tripple word score at +192 to the right so move 192 to the left */
 .board-tws {
     /* background-position: -128px 0; */
     background-position: -192px 0;
 }
 
+/* the star is the last texture at 240 to the right */
 .board-star {
     /* background-position: -160px 0; */
     background-position: -240px 0;
 }
 
+/* 
+once a board square is a letter it's background is replaced 
+with one of th eletter pngs and needs to be displayed fully. 
+*/
 .board-letter {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
+/* 
+This just sets the background image for each letter, so the classes can be set.
+It's basically a lookup table but in CSS. 
+*/
 .letter-A { background-image: url("../img/Scrabble_Tile_A.jpg"); }
 .letter-B { background-image: url("../img/Scrabble_Tile_B.jpg"); }
 .letter-C { background-image: url("../img/Scrabble_Tile_C.jpg"); }
@@ -135,23 +163,29 @@ body {
 .letter-Y { background-image: url("../img/Scrabble_Tile_Y.jpg"); }
 .letter-Z { background-image: url("../img/Scrabble_Tile_Z.jpg"); }
 
+/* blank letter too. added it to the JSON using the _ as it's character */
 .letter-_ {
     background-image: url("../img/Scrabble_Tile_Blank.jpg");
 }
 
+/* elements with this class have their position set to under the mouse in the js */
 .mousebound {
     position: absolute;
 }
 
+/* holder for the scrabble tiles and button section */
 #bottom-section {
     display: flex;
+    flex-direction: row;
 }
 
+/* vertical div for the buttons */
 #buttons {
     display: flex;
     flex-direction: column;
 }
 
+/* all buttons have a wood 3d effect and slight engraved shadows on their text */
 button {
     margin: auto;
 
@@ -174,12 +208,27 @@ button {
     color: #2f1b0c;
 }
 
+/* active buttons reverse their gradients and colored edge positions to look depressed */
+button:active {
+    background: linear-gradient(to bottom, #a67c52, #c19a6b);
+
+    border-top: 3px solid #7a5a38;
+    border-left: 3px solid #7a5a38;
+    border-right: 3px solid #d8b58a;
+    border-bottom: 3px solid #d8b58a;
+}
+
+/* 
+div that holds the score and reset game. Uses a grid layout to center 
+the score box but still have the reset button to the left. 
+*/
 #top-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
 }
 
+/* score holder is like a depressed button */
 #score-container {
     margin: 30px auto;
     padding: 0px;
@@ -202,17 +251,8 @@ button {
     grid-column: 2;
 }
 
+/* reset button is centered in the first column of the grid */
 #reset-game {
     grid-column: 1;
     margin: auto;
-}
-
-
-button:active {
-    background: linear-gradient(to bottom, #a67c52, #c19a6b);
-
-    border-top: 3px solid #7a5a38;
-    border-left: 3px solid #7a5a38;
-    border-right: 3px solid #d8b58a;
-    border-bottom: 3px solid #d8b58a;
 }

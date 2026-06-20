@@ -27,17 +27,22 @@ updated by JB on June 16, 2026
 </head>
 <body>
 
+    <!-- reset button and score display at top of screen -->
     <div id="top-container">
         <button id="reset-game">Reset Game</button>
         <div id="score-container">0</div>
-        <div id="spacer"></div>
     </div>
+
+    <!-- section to have the board filled in by js -->
     <div id="board-container">
         <table id="board"></table>
     </div>
     
+    <!-- bottom of the screen has the hand of tiles and the action buttons -->
     <div id="bottom-section">
+
         <div id="hand-container">
+            <!-- hand is a table where 7 tile slots always exist but are not always shown -->
             <table id="hand-0" class="hand">
                 <tr>
                     <td id="hand-tile-0" class="hand-none"></td>
@@ -50,6 +55,7 @@ updated by JB on June 16, 2026
                 </tr>
             </table>
         </div>
+        <!-- action buttons are in a column to the right of the hand -->
         <div id="buttons">
             <button id="submit">Submit Word</button>
             <button id="reset">Reset Tiles</button>
