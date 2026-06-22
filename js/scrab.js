@@ -39,6 +39,10 @@ $(document).ready(async function() {
 
         dragged = el;
         $(el).addClass("mousebound");
+        $(dragged).css({
+            left: (e.pageX - 32) + "px",
+            top: (e.pageY - 16) + "px"
+        });
     });
 
     // move
