@@ -93,6 +93,9 @@ async function setup() {
     specials.tls.forEach(element => {
         $(`#board-square-${element[0]}-${element[1]}`).addClass("board-tls");
     });
+    specials.star.forEach(element => {
+        $(`#board-square-${element[0]}-${element[1]}`).addClass("board-star");
+    });
 
     // save the chosen row's empty form
     rowHTML = $("#board-row-7").html();
@@ -251,7 +254,7 @@ function attemptPlace(x, y) {
     const value = getLetterValue(letter);
 
     // double a word on double word
-    if($(el).hasClass("board-dws")) {
+    if($(el).hasClass("board-dws") || $(el).hasClass("board-star")) {
         boardstate.mult *= 2;
     }
 
