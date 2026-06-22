@@ -114,8 +114,6 @@ async function loadJSON(json_file) {
     const response = await fetch(json_file);
     const data = await response.json();
 
-    console.log(data);
-
     return data;
 }
 
@@ -137,7 +135,6 @@ function drawUp(hand_index) {
 
 // put one tile back in the "bag". Ignores empty cells.
 function putBack(cell) {
-    console.log(cell);
     if($(cell).hasClass("hand-none")) return;
 
     const letter = getLetter(cell);
@@ -160,7 +157,6 @@ function draw1 (cell) {
     $(cell).removeClass("hand-none");
 
     let i = randint(0, letterTable.total - 1);
-            console.log(i);
     var j;
     for(j = 0; j < letterTable.pieces.length - 1; j++) {
         i -= letterTable.pieces[j].amount;

@@ -16,3 +16,7 @@ beginning with a single button click.
 Tiles are dealt with the proper distribution as per the original scrabble game. 
 The supply is also depleted as the tiles are drawn, and eventually the "bag" 
 will run out. 
+
+
+Board-square spritesheet by Screaming Brain Studios:    https://opengameart.org/content/2d-word-game-pack
+Wood grain in background created by Teh_Bucket:         https://opengameart.org/content/wood-grain-tileable
