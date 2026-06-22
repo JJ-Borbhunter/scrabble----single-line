@@ -152,6 +152,7 @@ function putBack(cell) {
 // Requires an empty slot to be passed in
 function draw1 (cell) {
     if(!$(cell).hasClass("hand-none")) return;
+    if(letterTable.pieces.length <= 0) return;
 
     $(cell).removeClass("hand-none");
 
