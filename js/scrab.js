@@ -1,3 +1,12 @@
+/*
+File: scrab.js
+GUI Assignment: Scrabble -- Single line version
+James Bord, UMass Lowell Computer Science, james_bord@student.uml.edu
+Copyright (c) 2026 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on June 29, 2026
+*/
+
 
 // Global variables, since JS doesn't give you statics
 // JSON letter table

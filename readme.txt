@@ -20,3 +20,5 @@ will run out.
 
 Board-square spritesheet by Screaming Brain Studios:    https://opengameart.org/content/2d-word-game-pack
 Wood grain in background created by Teh_Bucket:         https://opengameart.org/content/wood-grain-tileable
+ChatGPT was employed to generate the data in special-square.json, because it was just data, and not execution code. 
+    It would have taken a lot of time to type and ended up exactly the same. 
